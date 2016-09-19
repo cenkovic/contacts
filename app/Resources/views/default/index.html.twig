@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <div class="row placeholders">
+    {% for name,contact in contacts %}
+      <div class="col-xs-6 col-sm-3 placeholder contact">
+        <img
+          src="{{ asset('img/default-pic.jpg') }}"
+          width="200" height="200" class="img-responsive"
+          alt="Generic placeholder thumbnail">
+        <h4>{{ name }}</h4>
+        <ul class="list-group">
+          {% for row in contact %}
+            <li class="list-group-item text-left">
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              <span>{{ row.value }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
