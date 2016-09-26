@@ -12,7 +12,7 @@ class DefaultController extends Controller {
    */
   public function indexAction(Request $request) {
 
-    $query = $this->getDoctrine()->getEntityManager()->createQuery(
+    $query = $this->getDoctrine()->getManager()->createQuery(
       'SELECT p, pc FROM AppBundle:PersonContact pc LEFT JOIN pc.person p'
     );
 
