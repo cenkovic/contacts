@@ -11,6 +11,15 @@ use Doctrine\ORM\Mapping as ORM;
 class Person {
 
   /**
+   * Returns gender full string representation
+   *
+   * @return string
+   */
+  public function getGenderString() {
+    return $this->getGender() === 'M' ? 'Male' : 'Female';
+  }
+
+  /**
    * @ORM\Column(type="integer")
    * @ORM\Id
    * @ORM\GeneratedValue(strategy="AUTO")
@@ -80,4 +89,5 @@ class Person {
   public function getGender() {
     return $this->gender;
   }
+
 }
