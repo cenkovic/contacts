@@ -1,0 +1,25 @@
+<?php
+  @session_start();
+  function fb($msg, $label=null) {
+    if ($label != null) {
+      $msg = array($label,$msg);
+    }
+    error_log(print_r($msg, true));
+  }
+  include 'classes/BillingApi.php';
+ 
+  if (!defined('APP_URL')) {
+      define("APP_URL","http://<%= node['base']['hostname'] %>");
+  }
+ 
+  $options = array(
+      'username'  => 'admin@propulsionapp.com',
+      'password'  => '5c1ed474c1ffff8cfe20fb450f09fd73',
+      'url'      => APP_URL . '/api/billing'
+  );
+ 
+  $billing  = new BillingApi($options);
+  $sessionID = session_id();
+  $login    = isset($_SESSION['user']) ? $_SESSION['user'] : false;
+  $userID    = empty($login) ? 0 : $login['id'];
+?>
