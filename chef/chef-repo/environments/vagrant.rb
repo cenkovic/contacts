@@ -13,7 +13,8 @@ default_attributes(
 		    },
 		    :apache => {
 		    	:doc_root 				=> "/vagrant/web",
-		    	:default_site_enabled 	=> true
+		    	:default_site_enabled 	=> true,
+                        :docroot_dir => '/vagrant/web'
 		    },
 		    :deploy => {
 		    	:root 					=> "/vagrant",

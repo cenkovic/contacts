@@ -11,8 +11,9 @@
   <% if node['apache']['version'] == '2.4' -%>
     Require all granted
   <% else -%>
-    Order allow,deny
-    Allow from all
+    #Order allow,deny
+    #Allow from all
+    Require all granted
   <% end -%>
   </Directory>
 
