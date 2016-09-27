@@ -21,6 +21,4 @@ It is usually in `/etc/php.ini`. If one does not exists copy from
 * `php bin/console doctrine:fixtures:load`
 * `mkdir web/bundles && cd web/bundles && ln -s ../../vendor/twbs/bootstrap/dist/ bootstrap`
 
-U brosweru http://localhost:8000/
-
-Trebalo bi da se vidi lista od 5 kontakta :)
+Open http://localhost:8000/ in browser
