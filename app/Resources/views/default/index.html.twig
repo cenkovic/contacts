@@ -9,7 +9,7 @@
           alt="Generic placeholder thumbnail">
         <h4>{{ row['person'].name }}</h4>
         <h5 class="person-gender">
-          Gender: {{ row['person'].gender }}
+          Gender: {{ row['person'].getGenderString }}
         </h5>
         <ul class="list-group">
           {% for contact in row['contacts'] %}

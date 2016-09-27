@@ -17,7 +17,6 @@ class DefaultController extends Controller {
       'SELECT p, pc FROM AppBundle:PersonContact pc LEFT JOIN pc.person p'
     );
 
-//    print_r($query->getResult()[0]->getPerson() );die();
     $persons = array();
     foreach($query->getResult() as $contact) {
       /** @var Person $person */
