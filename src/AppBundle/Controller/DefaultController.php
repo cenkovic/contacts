@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Person;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,13 +18,16 @@ class DefaultController extends Controller {
     );
 
 //    print_r($query->getResult()[0]->getPerson() );die();
-    $contacts = array();
+    $persons = array();
     foreach($query->getResult() as $contact) {
-      $contacts[$contact->getPerson()->getName()][] = $contact;
+      /** @var Person $person */
+      $person = $contact->getPerson();
+      $persons[$person->getId()]['person'] = $person;
+      $persons[$person->getId()]['contacts'][] = $contact;
     }
 
     return $this->render('default/index.html.twig', array(
-      'contacts' => $contacts
+      'persons' => $persons
     ));
   }
 }

@@ -1,18 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block body %}
   <div class="row placeholders">
-    {% for name,contact in contacts %}
+    {% for row in persons %}
       <div class="col-xs-6 col-sm-3 placeholder contact">
         <img
           src="{{ asset('img/default-pic.jpg') }}"
           width="200" height="200" class="img-responsive"
           alt="Generic placeholder thumbnail">
-        <h4>{{ name }}</h4>
+        <h4>{{ row['person'].name }}</h4>
+        <h5>Gender: {{ row['person'].gender }}</h5>
         <ul class="list-group">
-          {% for row in contact %}
+          {% for contact in row['contacts'] %}
             <li class="list-group-item text-left">
               <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-              <span>{{ row.value }}</span>
+              <span>{{ contact.value }}</span>
             </li>
           {% endfor %}
         </ul>
