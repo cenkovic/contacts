@@ -8,7 +8,9 @@
           width="200" height="200" class="img-responsive"
           alt="Generic placeholder thumbnail">
         <h4>{{ row['person'].name }}</h4>
-        <h5>Gender: {{ row['person'].gender }}</h5>
+        <h5 class="person-gender">
+          Gender: {{ row['person'].gender }}
+        </h5>
         <ul class="list-group">
           {% for contact in row['contacts'] %}
             <li class="list-group-item text-left">
