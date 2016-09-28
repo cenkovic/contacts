@@ -14,5 +14,8 @@ class DefaultControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertContains('My Contacts', $crawler->filter('.page-header')->text());
+        $this->assertCount(3, $crawler->filter('.glyphicon-envelope'));
+        $this->assertCount(3, $crawler->filter('.glyphicon-phone'));
+        $this->assertCount(2, $crawler->filter('.glyphicon-map-marker'));
     }
 }

@@ -14,7 +14,7 @@
         <ul class="list-group">
           {% for contact in row['contacts'] %}
             <li class="list-group-item text-left">
-              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-{{contact.iconForType()}}" aria-hidden="true"></span>
               <span>{{ contact.value }}</span>
             </li>
           {% endfor %}
