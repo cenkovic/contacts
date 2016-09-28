@@ -56,7 +56,7 @@ class LoadPersonContactData extends AbstractFixture  implements OrderedFixtureIn
       array(
         'person' => 'Daliborka Ćirić',
         'type' => 'phone',
-        'value' => '001191122112',
+        'value' => '+1191122112',
       ),
       array(
         'person' => 'Milica Stevanović',
@@ -79,4 +79,5 @@ class LoadPersonContactData extends AbstractFixture  implements OrderedFixtureIn
   public function getOrder() {
     return 2;
   }
+  
 }

@@ -14,5 +14,12 @@ class DefaultControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertContains('My Contacts', $crawler->filter('.page-header')->text());
+        $this->assertContains('+381(64)1566311', $crawler->filter('.list-group-item')->text());
     }
+    
+    
+    
+    
+    
+    
 }

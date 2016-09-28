@@ -15,7 +15,7 @@
           {% for contact in row['contacts'] %}
             <li class="list-group-item text-left">
               <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-              <span>{{ contact.value }}</span>
+              <span>{{ contact.getFormatValue() }}</span>
             </li>
           {% endfor %}
         </ul>
