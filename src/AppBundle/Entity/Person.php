@@ -27,7 +27,6 @@ class Person {
    */
   protected $gender;
 
-
   /**
    * Get id
    *
@@ -80,4 +79,17 @@ class Person {
   public function getGender() {
     return $this->gender;
   }
+
+  public function formatName() {
+    $title = "";
+    if ($this->gender === 'M') {
+      $title = "Mr.";
+    } else {
+      $title = "Mrs.";
+    }
+    return $title . " " . $this->name;
+    
+    ;
+  }
+
 }
