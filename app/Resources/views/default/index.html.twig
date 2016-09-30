@@ -2,14 +2,14 @@
 {% block body %}
   <div class="row placeholders">
     {% for row in persons %}
-      <div class="col-xs-6 col-sm-3 placeholder contact">
+      <div class="col-xs-6 col-sm-3 placeholder contact" contact="{{row['person'].name}}">
         <img
           src="{{ asset('img/default-pic.jpg') }}"
           width="200" height="200" class="img-responsive"
           alt="Generic placeholder thumbnail">
         <h4>{{ row['person'].name }}</h4>
         <h5 class="person-gender">
-          Gender: {{ row['person'].gender }}
+          Gender: <span>{{ row['person'].gender }}</span>
         </h5>
         <ul class="list-group">
           {% for contact in row['contacts'] %}

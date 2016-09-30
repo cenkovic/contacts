@@ -1,7 +1,7 @@
 Feature: My Contacts
   In order to contact my friends
   As a contact list owner
-  I need to be able to see gender detaul for my contacts
+  I need to be able to see gender detail for my contacts
 
   Scenario: Gender details
     When I am on the homepage
