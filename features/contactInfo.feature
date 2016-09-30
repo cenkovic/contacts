@@ -5,7 +5,8 @@ Feature: My Contact Detil
 
   Scenario: Single contact detail
     Given I am on the homepage
-     When I check concats details for "Nemanja Cenkovic" then I should see:
+     When I check contacts details for "Nemanja Cenković" then I should see:
+      | Info                       |
       | +381641566311              |
       | cenkovic@propulsionapp.com |
       | Nasticeva 6/6, Beograd     |
