@@ -2,7 +2,7 @@
 {% block body %}
   <div class="row placeholders">
     {% for row in persons %}
-      <div class="col-xs-6 col-sm-3 placeholder contact">
+      <div class="col-xs-6 col-sm-3 placeholder contact" contact="{{ row['person'].name }}">
         <img
           src="{{ asset('img/default-pic.jpg') }}"
           width="200" height="200" class="img-responsive"

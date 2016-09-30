@@ -5,7 +5,8 @@ Feature: My Contacts
 
   Scenario: Displaying filters
     When I go to homepage
-    Then I should see:
+    Then I should see links:
+      | Link    |
       | All     |
       | Females |
       | Males   |
