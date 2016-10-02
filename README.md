@@ -22,3 +22,9 @@ It is usually in `/etc/php.ini`. If one does not exists copy from
 * `mkdir web/bundles && cd web/bundles && ln -s ../../vendor/twbs/bootstrap/dist/ bootstrap`
 
 Open http://localhost:8000/ in browser
+
+#Jenkins build
+* Source code management 
+  * Repository url: `https://github.com/cenkovic/contacts.git`
+* Add `bash jenkins.sh` in Build part
+
